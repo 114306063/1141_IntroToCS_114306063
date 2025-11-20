@@ -1,0 +1,241 @@
+body {
+    background-color: #f0f8ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*確保 body 佔滿整個視窗高度 */
+    min-height: 100vh;
+    /*移除預設邊距，並在邊緣加上間距 */
+    margin: 0;
+    padding: 20px;
+    /* 設置基本字體 */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.main-container {
+    width: 1000px;
+    background-color: #ffffff; 
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    /* 確保內容不會溢出圓角 */
+    overflow: hidden;
+    /* 設定一個最小高度，讓佈局看起來完整 */
+    min-height: 80vh; 
+}
+
+.left-panel {
+    width: 30%; 
+    /* 垂直 Flexbox，讓圖片和文字內容垂直堆疊 */
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-panel {
+
+}
+
+.photo-panel img {
+    width: 100%;
+    height: auto;
+    /* 消除 img 標籤底部的微小間隙 */
+    display: block; 
+}
+
+.text-content {
+    background-color: #0000cd; 
+    color: white; 
+    padding: 20px; 
+    /* 確保它佔滿剩餘垂直空間 (如果需要) */
+    flex-grow: 1; 
+}
+
+.text-content h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+}
+
+.text-content h3 {
+    font-size: 1.1em;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    /* 淺色分隔線 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.logo {
+    margin-top: 30px; 
+    text-align: left; 
+}
+
+.logo img {
+    width: 150px; /* 調整標誌大小 */
+    height: auto;
+    /* 避免標誌出現在中間，將其對齊到左邊或使用 Flexbox 調整位置 */
+    display: block;
+    border-radius: 25px; 
+}
+
+
+.right-panel {
+    width: 70%; 
+    background-color: #ffffff;
+    padding: 30px; 
+}
+
+/* 確保每個 Section 之間有間距 */
+.right-panel section {
+    margin-bottom: 40px;
+}
+
+.right-panel .section-title {
+    color: #0000cd; 
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 2px solid #b0c4de;
+    padding-bottom: 5px; /* 標題與分隔線之間的間距 */
+    margin-top: 0;
+    margin-bottom: 20px; /* 分隔線與內容之間的間距 */
+}
+
+.education-item {
+    display: flex; /* 確保年份和描述並排 */
+    justify-content: space-between; /* 內容間隔開來 */
+    margin-bottom: 15px;
+} 
+
+.education-item .year {
+    font-weight: bold; 
+    color: #4169e1;
+    width: 25%; 
+    flex-shrink: 0; 
+}
+
+.education-item .description {
+    text-align: left;
+    width: 70%;
+    color: #4682b4; 
+}
+
+.skill-tags {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; /* 標籤之間的間距 */
+}
+
+.skill-tags .tag {
+    display: inline-block; 
+    background-color: #b0c4de;
+    color: #4682b4;
+    border: 1px solid #b0c4de;
+  
+    padding: 5px 12px;
+    border-radius: 15px;
+    
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* 移除背景色，將背景色設置到內部 column 中 */
+.homework-lab-container {
+    display: flex; 
+    padding: 0; /* 移除容器 padding，由內部 column 提供 */
+    border-radius: 8px;
+    gap: 20px; /* 增加兩欄之間的間距 */
+}
+
+.hw-column, 
+.lab-column {
+    flex: 1; /* 讓兩欄平均分配寬度 */
+ 
+    background-color: #b0c4de; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.homework-lab-container h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4682b4;
+    margin-top: 0;
+    margin-bottom: 15px; /* 增加標題與列表的間距 */
+}
+
+.homework-lab-container ul {
+    list-style: disc; 
+    padding-left: 20px;
+    margin: 0;
+}
+
+.homework-lab-container li {
+    margin-bottom: 5px; /* 列表項目之間的間距 */
+}
+
+.homework-lab-container a {
+    text-decoration: none;
+    color: #0000cd; 
+}
+
+.homework-lab-container a:hover {
+    color: #4169e1; 
+}
+
+.music-list {
+    display: flex;
+    justify-content: space-between; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.music-item {
+    flex: 1; /* 每個項目佔據相等空間 */
+    padding: 0 5px;
+}
+
+.music-icon {
+    text-align: center; 
+    margin-bottom: 5px;
+}
+
+.music-icon img {
+    width: 60px; 
+    height: 60px;
+    
+    display: block; 
+    margin: 0 auto; 
+    
+    /* 讓圖標有輕微的圓角 */
+    border-radius: 10px; 
+}
+
+.music-item p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #4169e1;
+}
+
+.music-note {
+    font-size: 0.9em;
+    color: #4682b4;
+    text-align: left;  
+    margin-top: 10px;
+    line-height: 1.4;
+}
